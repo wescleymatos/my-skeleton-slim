@@ -10,7 +10,9 @@ $app->get('/', function ($request, $response, $args) {
     $this->logger->info("Slim-Skeleton '/' route");
 
     // Render index view
-    return $this->renderer->render($response, 'index.phtml', $args);
+    return $this->view->render($response, 'index.html', [
+        'tela' => 'Tela de Login'
+    ]);
 });
 
 $app->get('/autenticar', function (Request $request, Response $response) {
