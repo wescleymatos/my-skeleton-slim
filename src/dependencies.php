@@ -3,7 +3,7 @@
 
 $container = $app->getContainer();
 
-// view renderer
+//twig view
 $container['view'] = function ($c) {
     $folder = $c->get('settings')['renderer'];
     $view = new \Slim\Views\Twig($folder['template_path'], [
